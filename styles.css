@@ -40,7 +40,7 @@ body {
   backdrop-filter: grayscale(110%);
   position: fixed;
 }
-.homescore {
+.score {
   background: black;
   font-size: 5em;
   color: #f94f6d;
