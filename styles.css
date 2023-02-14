@@ -17,6 +17,7 @@ body {
   position: relative;
   min-width: 30em;
   min-height: min-content;
+  line-height: 2em;
 }
 .container {
   font-size: 1em;
