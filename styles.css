@@ -27,6 +27,8 @@ body {
   flex-direction: row;
   height: 50vh;
   width: 70rem;
+  min-width: 30;
+  min-height: 15em;
   border: 1px solid #f94f6d;
   padding: 5em;
   border-radius: 1em;
@@ -36,7 +38,7 @@ body {
   box-shadow: 0 0 10px 0 #f94f6d;
   background-clip: border-box;
   backdrop-filter: grayscale(110%);
-  position: relative;
+  position: fixed;
 }
 .score {
   background: black;
@@ -119,7 +121,7 @@ button:focus {
     padding: 0;
   }
   button {
-    width: 50%;
+    width: 2em;
   }
 }
 
