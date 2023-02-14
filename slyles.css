@@ -1,6 +1,10 @@
 body {
   margin: 0;
   text-align: center;
+  background-image: url(https://static.vecteezy.com/system/resources/previews/003/096/818/original/basket-ball-stadium-background-free-vector.jpg);
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 80vw;
 }
 
 .score {
