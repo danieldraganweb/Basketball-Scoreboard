@@ -3,8 +3,7 @@ body {
   justify-content: center;
   align-items: center;
   font-family: monospace;
-  font-weight: 600;
-  font-size: 1.5rem;
+  font-size: 1.6em;
   text-align: center;
   background-color: black;
   background-size: cover;
@@ -15,12 +14,9 @@ body {
   margin-left: auto;
   margin-right: auto;
   background-image: url(bg.jpg);
-}
-h3 {
-  color: #f94f6d;
-  font-size: 2rem;
-  margin: 0;
-  padding: 0;
+  position: relative;
+  min-width: 30em;
+  min-height: min-content;
 }
 .container {
   font-size: 1em;
@@ -29,7 +25,7 @@ h3 {
   align-items: center;
   flex-direction: row;
   height: 50vh;
-  width: 75rem;
+  width: 70rem;
   border: 1px solid #f94f6d;
   padding: 5em;
   border-radius: 1em;
@@ -39,6 +35,7 @@ h3 {
   box-shadow: 0 0 10px 0 #f94f6d;
   background-clip: border-box;
   backdrop-filter: grayscale(110%);
+  position: relative;
 }
 .score {
   background: black;
@@ -94,11 +91,12 @@ button {
   color: #000000;
   font-size: 1.5em;
   cursor: pointer;
-  width: 4em;
+  width: 3.5em;
   height: 1.5em;
   border-radius: 1em;
   margin: 0.5em;
   position: relative;
+  transition: all 0.2s ease-in-out;
 }
 button:hover {
   background: black;
@@ -107,6 +105,7 @@ button:hover {
 button:active {
   background: black;
   color: #ffffff;
+  transform: translate(2px, 2px);
 }
 button:focus {
   outline: none;
@@ -125,13 +124,7 @@ button:focus {
 
 h3 {
   color: #f94f6d;
-  font-size: 2rem;
+  font-size: 5rem;
   margin: 0;
   padding: 0;
-}
-.collumn {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
