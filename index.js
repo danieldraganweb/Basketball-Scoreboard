@@ -38,3 +38,30 @@ function resetTimer() {
 function addQuarter() {
   console.log("addQuarter() called");
 }
+function subQuarter() {
+  console.log("subQuarter() called");
+}
+
+function addHomeFoul() {
+  console.log("addHomeFoul() called");
+}
+function subHomeFoul() {
+  console.log("subHomeFoul() called");
+}
+function addAwayFoul() {
+  console.log("addAwayFoul() called");
+}
+function subAwayFoul() {
+  console.log("subAwayFoul() called");
+}
+function newGame() {
+  console.log("newGame() called");
+
+  homeScore.innerHTML = 0;
+  awayScore.innerHTML = 0;
+  quarter.innerHTML = 1;
+  timer.innerHTML = "00:00";
+  homeFouls.innerHTML = 0;
+  awayFouls.innerHTML = 0;
+}
+// Function
