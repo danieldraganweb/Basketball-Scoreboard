@@ -77,27 +77,48 @@ function resetTimer() {
 
 function nextQuarter() {
   if (quarter == 4) {
+    timer = "0:00";
+    document.getElementById("timer").textContent = timer;
     if (homeScore > awayScore) {
-      document.getElementById("win-message").innerHTML = "Home Team Wins!";
+      document.getElementById("quarter").innerHTML =
+        "<p class='winning-team'>Home Team Wins!</p>";
     } else if (awayScore > homeScore) {
-      document.getElementById("win-message").innerHTML = "Away Team Wins!";
+      document.getElementById("quarter").innerHTML =
+        "<p class='winning-team'>Away Team Wins!</p>";
     } else {
-      document.getElementById("win-message").innerHTML = "Tie Game!";
+      document.getElementById("quarter").innerHTML =
+        "<p class='tie-game'>Tie Game!</p>";
       timer = "5:00";
       document.getElementById("timer").textContent = timer;
+      document.getElementById("next-quarter-btn").disabled = true;
+      setTimeout(function () {
+        if (homeScore > awayScore) {
+          document.getElementById("quarter").innerHTML =
+            "<p class='winning-team'>Home Team Wins!</p>";
+        } else if (awayScore > homeScore) {
+          document.getElementById("quarter").innerHTML =
+            "<p class='winning-team'>Away Team Wins!</p>";
+        } else {
+          document.getElementById("quarter").innerHTML =
+            "<p class='tie-game'>Tie Game!</p>";
+        }
+        document.getElementById("new-game-btn").style.display = "block";
+      }, 5000);
+      return;
     }
+    document.getElementById("new-game-btn").style.display = "block";
     return;
   }
+
   quarter += 1;
   document.getElementById("quarter").textContent = quarter;
+
+  // reset the timer to 12:00
+  timer = "12:00";
+  document.getElementById("timer").textContent = timer;
+  document.getElementById("next-quarter-btn").disabled = false;
   console.log("nextQuarter() called");
 }
-
-// function to store the quarter in the DOM
-function storeQuarter() {
-  console.log("storeQuarter() called");
-}
-
 // Functions for Fouls
 
 function addHomeFoul() {
@@ -130,15 +151,16 @@ function subAwayFoul() {
 
 // Function to reset the game
 function newGame() {
-  resetTimer();
-  document.getElementById("home-score").textContent = 0;
-  document.getElementById("away-score-count").textContent = 0;
-  document.getElementById("quarter").textContent = 1;
   homeScore = 0;
   awayScore = 0;
-  document.getElementById("home-fouls-count").textContent = 0;
-  document.getElementById("away-fouls-count").textContent = 0;
   homeFouls = 0;
   awayFouls = 0;
-  console.log("newGame() called");
+  quarter = 1;
+  timer = "12:00";
+  document.getElementById("home-score-countS").textContent = homeScore;
+  document.getElementById("away-score-count").textContent = awayScore;
+  document.getElementById("home-fouls-count").textContent = homeFouls;
+  document.getElementById("away-fouls-count").textContent = awayFouls;
+  document.getElementById("quarter").textContent = quarter;
+  document.getElementById("timer").textContent = timer;
 }
