@@ -27,7 +27,7 @@ body {
   align-content: center;
   align-items: center;
   height: 50vh;
-  width: 70rem;
+  width: 80rem;
   min-width: 30;
   min-height: 15em;
   border: 1px solid #f94f6d;
@@ -110,6 +110,9 @@ body {
     transform: scale(1);
   }
 }
+.home-fouls {
+  border: 1px solid #f94f6d;
+}
 .away-score {
   background: black;
   font-size: 5em;
@@ -156,6 +159,9 @@ body {
   100% {
     transform: scale(1);
   }
+}
+.away-fouls {
+  border: 1px solid #f94f6d;
 }
 
 button {
