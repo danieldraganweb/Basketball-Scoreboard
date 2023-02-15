@@ -40,7 +40,7 @@ body {
   box-shadow: 0 0 10px 0 #f94f6d;
   background-clip: border-box;
   backdrop-filter: grayscale(110%);
-  position: -webkit-sticky;
+  position: relative;
 }
 .stats-table {
   border: 2px solid #f94f6d;
@@ -222,6 +222,11 @@ button:disabled {
   margin-right: 0.5em;
 }
 .next-q-btn {
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+}
+.new-game-btn {
   margin-left: auto;
   margin-right: auto;
   width: 250px;
