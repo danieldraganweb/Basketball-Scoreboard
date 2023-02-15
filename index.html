@@ -10,7 +10,7 @@
     <div class="container">
       <div class="column1">
         <h3>HOME</h3>
-        <h2 class="home-score">0</h2>
+        <h2 id="home-score" class="home-score">0</h2>
         <h2>Points</h2>
         <div class="home-btns">
           <button onclick="add1HomeScore()">+1</button>
@@ -19,31 +19,33 @@
         </div>
         <div class="home-fouls">
           <h2>Fouls</h2>
-          <h2 class="home-fouls-count">0</h2>
+          <h2 id="home-fouls-count" class="home-fouls-count">0</h2>
           <button onclick="addAwayFoul()">+1</button>
           <button onclick="subAwayFoul()">-1</button>
         </div>
       </div>
       <div class="stats-table">
         <div timer>
-          <h2 class="timer">00:00</h2>
+          <h2 id="timer" class="timer">00:00</h2>
           <button onclick="startTimer()">Start</button>
           <button onclick="stopTimer()">Stop</button>
           <button onclick="resetTimer()">Reset</button>
         </div>
         <div>
-          <h3 class="quarter">1</h3>
+          <h3 id="quarter" class="quarter">1</h3>
           <button class="next-q-btn" onclick="nextQuarter()">
             Next Quarter
           </button>
         </div>
         <div>
-          <button class="new-game-btn" onclick="newGame()">New Game</button>
+          <button id="new-game-btn" class="new-game-btn" onclick="newGame()">
+            New Game
+          </button>
         </div>
       </div>
       <div class="column2">
         <h3>AWAY</h3>
-        <h2 class="away-score">0</h2>
+        <h2 id="away-score-count" class="away-score">0</h2>
         <h2>Points</h2>
         <div class="away-btns">
           <button onclick="add1AwayScore()">+1</button>
@@ -52,7 +54,7 @@
         </div>
         <div class="away-fouls">
           <h2>Fouls</h2>
-          <h2 class="away-fouls-count">0</h2>
+          <h2 id="away-fouls-count" class="away-fouls-count">0</h2>
           <button onclick="addAwayFoul()">+1</button>
           <button onclick="subAwayFoul()">-1</button>
         </div>
