@@ -26,7 +26,15 @@
       </div>
       <div class="stats-table">
         <div timer>
-          <h2 id="timer" class="timer">12:00</h2>
+          <h2 id="timer" class="timer">
+            <div class="outer-circle">
+              <div class="inner-circle">
+                <span id="minutes">12</span>
+                <span>:</span>
+                <span id="seconds">00</span>
+              </div>
+            </div>
+          </h2>
           <button onclick="startTimer()">Start</button>
           <button onclick="stopTimer()">Stop</button>
           <button onclick="resetTimer()">Reset</button>
