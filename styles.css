@@ -42,6 +42,20 @@ body {
   backdrop-filter: grayscale(110%);
   position: relative;
 }
+h1 {
+  color: #f94f6d;
+  font-size: 7rem;
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  color: #f94f6d;
+  font-size: 5rem;
+  margin: 0;
+  padding: 0;
+}
+
 .stats-table {
   border: 2px solid #f94f6d;
   border-radius: 1em;
@@ -49,6 +63,12 @@ body {
   margin: 1em;
   padding: 1em;
   line-height: 2em;
+}
+.quarter {
+  color: #f94f6d;
+  font-size: 3rem;
+  margin: 0;
+  padding: 0;
 }
 .timer {
   color: #f94f6d;
@@ -252,24 +272,4 @@ button:disabled {
   button {
     width: 1em;
   }
-}
-
-h1 {
-  color: #f94f6d;
-  font-size: 7rem;
-  margin: 0;
-  padding: 0;
-}
-
-h3 {
-  color: #f94f6d;
-  font-size: 5rem;
-  margin: 0;
-  padding: 0;
-}
-.quarter {
-  color: #f94f6d;
-  font-size: 3rem;
-  margin: 0;
-  padding: 0;
 }
