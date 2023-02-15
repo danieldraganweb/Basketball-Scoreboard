@@ -4,8 +4,12 @@ let quarter = document.getElementById("quarter");
 let timer = document.getElementById("timer");
 let homeFouls = document.getElementById("home-fouls-count");
 let awayFouls = document.getElementById("away-fouls-count");
+let count = 0;
 
 function add1HomeScore() {
+  let currentScore = parseInt(homeScore.innerText);
+  let newScore = currentScore + 1;
+  homeScore.innerText = newScore;
   console.log("add1HomeScore() called");
 }
 function add2HomeScore() {
