@@ -27,17 +27,17 @@ function add3HomeScore() {
 
 function add1AwayScore() {
   awayScore += 1;
-  document.getElementById("away-score").textContent = awayScore;
+  document.getElementById("away-score-count").textContent = awayScore;
   console.log("add1AwayScore() called");
 }
 function add2AwayScore() {
   awayScore += 2;
-  document.getElementById("away-score").textContent = awayScore;
+  document.getElementById("away-score-count").textContent = awayScore;
   console.log("add2AwayScore() called");
 }
 function add3AwayScore() {
   awayScore += 3;
-  document.getElementById("away-score").textContent = awayScore;
+  document.getElementById("away-score-count").textContent = awayScore;
   console.log("add3AwayScore() called");
 }
 
