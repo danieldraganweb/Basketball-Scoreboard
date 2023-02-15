@@ -1,12 +1,13 @@
-let homeScore = document.getElementById("home-score");
-let awayScore = document.getElementById("away-score");
-let quarter = document.getElementById("quarter");
-let timer = document.getElementById("timer");
-let homeFouls = document.getElementById("home-fouls-count");
-let awayFouls = document.getElementById("away-fouls-count");
-let count = 0;
+let homeScore = 0;
+let awayScore = 0;
+let quarter = 1;
+let timer = 0;
+let homeFouls = 0;
+let awayFouls = 0;
 
 function add1HomeScore() {
+  homeScore += 1;
+  document.getElementById("home-score").textContent = homeScore;
   console.log("add1HomeScore() called");
 }
 function add2HomeScore() {
@@ -56,5 +57,11 @@ function subAwayFoul() {
   console.log("subAwayFoul() called");
 }
 function newGame() {
+  let homeScore = 0;
+  let awayScore = 0;
+  let quarter = 1;
+  let timer = 0;
+  let homeFouls = 0;
+  let awayFouls = 0;
   console.log("newGame() called");
 }
