@@ -31,7 +31,7 @@ body {
   min-width: 30;
   min-height: 15em;
   border: 1px solid #f94f6d;
-  padding: 5em;
+  padding: 6em;
   border-radius: 1em;
   background-size: cover;
   background-repeat: no-repeat;
@@ -40,6 +40,28 @@ body {
   background-clip: border-box;
   backdrop-filter: grayscale(110%);
   position: fixed;
+}
+.stats-table {
+  border: 2px solid #f94f6d;
+  border-radius: 1em;
+  width: calc(100% - 2em);
+  margin: 1em;
+  padding: 1em;
+}
+.timer {
+  color: #f94f6d;
+  font-size: 3rem;
+  padding: 0;
+}
+
+.stats-table {
+  border: 2px solid #403436;
+}
+.stats-table td {
+  padding: 1.5em;
+  border: 2px solid #433e3f;
+  border-radius: 1em;
+  text-align: center;
 }
 .home-score {
   background: black;
@@ -52,7 +74,7 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
   margin-left: auto;
   margin-right: auto;
 }
@@ -99,7 +121,7 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
   margin-left: auto;
   margin-right: auto;
 }
@@ -190,6 +212,9 @@ button:disabled {
   margin-right: 0.5em;
 }
 .next-q-btn {
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
 }
 @media all and (max-width: 600px) {
   .container {
