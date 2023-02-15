@@ -76,49 +76,34 @@ function resetTimer() {
 }
 
 function nextQuarter() {
-  if (quarter == 4) {
+  if (quarter === 4) {
+    if (homeScore > awayScore) {
+      document.getElementById("quarter").innerHTML = "Home Team Wins!";
+    } else if (awayScore > homeScore) {
+      document.getElementById("quarter").innerHTML = "Away Team Wins!";
+    } else {
+      document.getElementById("quarter").innerHTML = "Tie Game!";
+    }
+
     timer = "0:00";
     document.getElementById("timer").textContent = timer;
-    if (homeScore > awayScore) {
-      document.getElementById("quarter").innerHTML =
-        "<p class='winning-team'>Home Team Wins!</p>";
-    } else if (awayScore > homeScore) {
-      document.getElementById("quarter").innerHTML =
-        "<p class='winning-team'>Away Team Wins!</p>";
-    } else {
-      document.getElementById("quarter").innerHTML =
-        "<p class='tie-game'>Tie Game!</p>";
-      timer = "5:00";
-      document.getElementById("timer").textContent = timer;
-      document.getElementById("next-quarter-btn").disabled = true;
-      setTimeout(function () {
-        if (homeScore > awayScore) {
-          document.getElementById("quarter").innerHTML =
-            "<p class='winning-team'>Home Team Wins!</p>";
-        } else if (awayScore > homeScore) {
-          document.getElementById("quarter").innerHTML =
-            "<p class='winning-team'>Away Team Wins!</p>";
-        } else {
-          document.getElementById("quarter").innerHTML =
-            "<p class='tie-game'>Tie Game!</p>";
-        }
-        document.getElementById("new-game-btn").style.display = "block";
-      }, 5000);
-      return;
-    }
-    document.getElementById("new-game-btn").style.display = "block";
+
+    document.getElementById("new-game-btn").disabled = false;
+    document.getElementById("next-quarter-btn").disabled = true;
+
     return;
   }
 
   quarter += 1;
   document.getElementById("quarter").textContent = quarter;
 
-  // reset the timer to 12:00
+  // Reset the timer to 12:00
   timer = "12:00";
   document.getElementById("timer").textContent = timer;
-  document.getElementById("next-quarter-btn").disabled = false;
+
   console.log("nextQuarter() called");
 }
+
 // Functions for Fouls
 
 function addHomeFoul() {
@@ -151,16 +136,44 @@ function subAwayFoul() {
 
 // Function to reset the game
 function newGame() {
+  // Check that the required elements exist in the HTML document
+  const homeScoreElem = document.getElementById("home-score-count");
+  const awayScoreElem = document.getElementById("away-score-count");
+  const homeFoulsElem = document.getElementById("home-fouls-count");
+  const awayFoulsElem = document.getElementById("away-fouls-count");
+  const quarterElem = document.getElementById("quarter");
+  const timerElem = document.getElementById("timer");
+  const newGameBtn = document.getElementById("new-game-btn");
+
+  if (
+    !homeScoreElem ||
+    !awayScoreElem ||
+    !homeFoulsElem ||
+    !awayFoulsElem ||
+    !quarterElem ||
+    !timerElem ||
+    !newGameBtn
+  ) {
+    console.error("Required elements not found in HTML document");
+    return;
+  }
+
+  // Reset game variables
   homeScore = 0;
   awayScore = 0;
   homeFouls = 0;
   awayFouls = 0;
   quarter = 1;
   timer = "12:00";
-  document.getElementById("home-score-countS").textContent = homeScore;
-  document.getElementById("away-score-count").textContent = awayScore;
-  document.getElementById("home-fouls-count").textContent = homeFouls;
-  document.getElementById("away-fouls-count").textContent = awayFouls;
-  document.getElementById("quarter").textContent = quarter;
-  document.getElementById("timer").textContent = timer;
+
+  // Update the HTML elements with the new values
+  homeScoreElem.textContent = homeScore;
+  awayScoreElem.textContent = awayScore;
+  homeFoulsElem.textContent = homeFouls;
+  awayFoulsElem.textContent = awayFouls;
+  quarterElem.textContent = quarter;
+  timerElem.textContent = timer;
+  newGameBtn.disabled = true;
+
+  console.log("New game started");
 }
