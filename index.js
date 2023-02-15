@@ -36,8 +36,8 @@ function resetTimer() {
   console.log("resetTimer() called");
 }
 
-function addQuarter() {
-  console.log("addQuarter() called");
+function nextQuarter() {
+  console.log("nextQuarter() called");
 }
 // function subQuarter() {
 //   console.log("subQuarter() called");
