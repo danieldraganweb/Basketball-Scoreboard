@@ -76,30 +76,23 @@ function resetTimer() {
 }
 
 function nextQuarter() {
-    if (quarter == 4) {
-      timer = "0:00";
+  if (quarter == 4) {
+    if (homeScore > awayScore) {
+      document.getElementById("win-message").innerHTML = "Home Team Wins!";
+    } else if (awayScore > homeScore) {
+      document.getElementById("win-message").innerHTML = "Away Team Wins!";
+    } else {
+      document.getElementById("win-message").innerHTML = "Tie Game!";
+      timer = "5:00";
       document.getElementById("timer").textContent = timer;
-      if (homeScore > awayScore) {
-        document.getElementById("quarter").textContent = "Home Team Wins!";
-      } else if (awayScore > homeScore) {
-        document.getElementById("quarter").textContent = "Away Team Wins!";
-      } else {
-        document.getElementById("quarter").textContent = "Tie Game!";
-      }
-      document.getElementById("new-game-btn").style.display = "block";
-      return;
     }
-  
-    quarter += 1;
-    document.getElementById("quarter").textContent = quarter;
-  
-    // reset the timer to 12:00
-    timer = "12:00";
-    document.getElementById("timer").textContent = timer;
-    
-    console.log("nextQuarter() called");
+    return;
   }
+  quarter += 1;
+  document.getElementById("quarter").textContent = quarter;
+  console.log("nextQuarter() called");
 }
+
 // function to store the quarter in the DOM
 function storeQuarter() {
   console.log("storeQuarter() called");
