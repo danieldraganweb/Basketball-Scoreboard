@@ -7,9 +7,6 @@ let awayFouls = document.getElementById("away-fouls-count");
 let count = 0;
 
 function add1HomeScore() {
-  let currentScore = parseInt(homeScore.innerText);
-  let newScore = currentScore + 1;
-  homeScore.innerText = newScore;
   console.log("add1HomeScore() called");
 }
 function add2HomeScore() {
@@ -42,9 +39,9 @@ function resetTimer() {
 function addQuarter() {
   console.log("addQuarter() called");
 }
-function subQuarter() {
-  console.log("subQuarter() called");
-}
+// function subQuarter() {
+//   console.log("subQuarter() called");
+// }
 
 function addHomeFoul() {
   console.log("addHomeFoul() called");
@@ -60,12 +57,4 @@ function subAwayFoul() {
 }
 function newGame() {
   console.log("newGame() called");
-
-  homeScore.innerHTML = 0;
-  awayScore.innerHTML = 0;
-  quarter.innerHTML = 1;
-  timer.innerHTML = "00:00";
-  homeFouls.innerHTML = 0;
-  awayFouls.innerHTML = 0;
 }
-// Function
