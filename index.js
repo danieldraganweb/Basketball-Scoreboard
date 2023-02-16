@@ -85,6 +85,7 @@ function stopTimer() {
 function resetTimer() {
   clearInterval(countdown);
   if (timer === "5:00") {
+    document.getElementById("next-quarter-btn").disabled = true;
     return;
   }
   timer = "12:00";
@@ -96,8 +97,10 @@ function nextQuarter() {
   if (quarter === 4) {
     if (homeScore > awayScore) {
       document.getElementById("quarter").innerHTML = "Home Team Wins!";
+      timer = "12:00";
     } else if (awayScore > homeScore) {
       document.getElementById("quarter").innerHTML = "Away Team Wins!";
+      timer = "12:00";
     } else {
       document.getElementById("quarter").innerHTML = "Tie Game!";
     }
