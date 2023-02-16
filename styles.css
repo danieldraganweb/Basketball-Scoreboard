@@ -69,13 +69,13 @@ h3 {
   font-size: 3rem;
   margin: 0;
   padding: 0;
-  border: 1px solid #000000;
+  border: 2px solid #000000;
   border-radius: 1em;
 }
 .quarter:hover {
   background-color: #000000;
   color: #f94f6d;
-  cursor: pointer;
+  cursor: crosshair;
 }
 .timer {
   font-size: 3rem;
@@ -84,9 +84,7 @@ h3 {
   margin-bottom: 1rem;
   color: #000000;
 }
-.timer:hover {
-  cursor: pointer;
-}
+
 .stats-table {
   border: 2px solid #403436;
 }
